@@ -1,5 +1,6 @@
 # Create your views here.
 from django.shortcuts import render
+from django.contrib.auth.models import User
 
 def home(request):
   return render(request, 'share_app/Homepage.html', {})
@@ -10,3 +11,6 @@ def profile(request):
 def login(request):
   return render(request, 'share_app/login.html', {})
 
+def submitlogin(request):
+	UserName = request.POST['username']
+	Password = request
