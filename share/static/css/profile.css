@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
 	margin: 0;
 }
@@ -30,4 +31,9 @@ body {
 	height:20%;
 	background-color: purple;
 }
+=======
+.span1 { font-size:30px; font-weight:bold; padding-right:80px}
+#name { font-size:20px; padding-bottom:25px; padding-top:60px}
+#name2 { font-size:15px; padding-bottom:10px}
+>>>>>>> 5198a0e0918d11cc6d42ef0141f6ffc9f1d385b2
 
