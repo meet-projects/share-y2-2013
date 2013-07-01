@@ -12,5 +12,5 @@ def login(request):
   return render(request, 'share_app/login.html', {})
 
 def submitlogin(request):
-	UserName = request.POST['username']
-	Password = request
+  UserName = request.POST['username']
+  Password = request
