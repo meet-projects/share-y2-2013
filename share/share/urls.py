@@ -8,6 +8,8 @@ from share_app import views
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', views.home),
+    url(r'^profile$', views.profile),
+    url(r'^login$', views.login),
     # url(r'^$', 'share.views.home', name='home'),
     # url(r'^share/', include('share.foo.urls')),
 
