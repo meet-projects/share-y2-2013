@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
 def home(request):
@@ -28,7 +29,6 @@ def submitlogin(request):
 	return HttpResponseRedirect('home')
 
 def signup(request):
-	print "I am going to work"
-	User.objects.create_user(username=request.POST['username2'], email=request.POST["email"],password=request.POST["password2"],first_name=request.POST["firstname"], last_name=request.POST["lastname"])
+	User.objects.create_user(username=request.POST['username2'], email=request.POST["email"],password=request.POST["password2"], last_name=request.POST["lastname"],first_name=request.POST["firstname"])
 	 
 	
