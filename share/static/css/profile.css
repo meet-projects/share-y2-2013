@@ -1,4 +1,33 @@
-.span1 { font:"Arial";font-size:30px; font-weight:bold; padding-right:180px}
-#name { font-size:20px; padding-bottom:25px; padding-top:60px}
-#name2 { font-size:15px; padding-bottom:10px}
+body {
+	margin: 0;
+}
+
+#header{
+	text-align:center;
+	height: 20%;
+	background-color:purple;
+	font-size: 80;
+}
+
+#main {
+	background-color:6666CC;
+	height: 60%;
+	
+}
+
+#AddPhoto {
+	float:left;
+	padding-left:80px;
+}
+
+#Settings {
+	float:right;
+	width:450px;
+	
+}
+
+#footer{
+	height:20%;
+	background-color: purple;
+}
 
