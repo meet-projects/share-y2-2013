@@ -3,7 +3,6 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
 def home(request):
@@ -16,9 +15,11 @@ def login(request):
   return render(request, 'share_app/login.html', {})
 
 def submitlogin(request):
-	UserName = request.POST['username']
-	Password = request.POST['password']
-	user= authenticate(username=UserName, password=Password)
+	print request.POST
+	user1 = request.POST.get('username',False)
+	pwd = request.POST.get('password',False)
+	print user1
+	user= authenticate(username=user1, password=pwd)
 	if user is not None:
 		if user.is_active:
 			login(request, user)
@@ -29,6 +30,7 @@ def submitlogin(request):
 	return HttpResponseRedirect('home')
 
 def signup(request):
-	User.objects.create_user(username=request.POST['username2'], email=request.POST["email"],password=request.POST["password2"], last_name=request.POST["lastname"],first_name=request.POST["firstname"])
+	print "I am going to work"
+	User.objects.create_user(username=request.POST['username2'], email=request.POST["email"],password=request.POST["password2"],first_name=request.POST["firstname"], last_name=request.POST["lastname"])
 	 
 	
