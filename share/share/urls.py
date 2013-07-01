@@ -10,7 +10,6 @@ urlpatterns = patterns('',
     url(r'^$', views.home),
     url(r'^profile$', views.profile),
     url(r'^login$', views.login),
-    url(r'^submitlogin$' views.submitlogin),
     # url(r'^$', 'share.views.home', name='home'),
     # url(r'^share/', include('share.foo.urls')),
 
