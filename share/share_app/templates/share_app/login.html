@@ -11,24 +11,26 @@
 				<h1>Login: </h1>
 				<form action="submitlogin" method="post">
 				{%csrf_token%}	
-				<div>Username: <input type='text'/> </div>
-				<div>Password: <input type='password'/> </div>
+				<div>Username: <input type='text' name='username'/> </div>
+				<div>Password: <input type='password' name='password'/> </div>
 				<input type="submit" value="login"/>
 				</form>
 
 			</div>
    	           	<div id="signup">
 				<h1>Sign Up: </h1>
-				<div>First Name: <input type='text' name='firstname'/> </div>
-				<div>Last Name: <input type='text' name='lastname'/> </div>
-				<div>Username: <input type= 'text' name= 'username'/></div>
-				<div>Birth Date: <select name='birthday_day'><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option> <option>29</option><option>30</option><option>31</option></select>
+				<form>
+					<div>First Name: <input type='text' name='firstname'/> </div>
+					<div>Last Name: <input type='text' name='lastname'/> </div>
+					<div>Username: <input type= 'text' name= 'username'/></div>
+					<div>Birth Date: <select name='birthday_day'><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option> <option>29</option><option>30</option><option>31</option></select>
 	 <select name='birthday_month'>	<option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option></select>
 	<select name='birthday_year'><option>1985</option><option>1986</option><option>1987</option><option>1988</option><option>1989</option><option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option><option>1996</option><option>1997</option><option>1998</option></select> 
 				</div>
 				<div>Email Address: <input type='text' name='email'/> </div>
 				<div>Password: <input type='password' name='password'/> </div>				
-				<input type='button' value="Sign Up"></div>
+				<input type='submit' value="Sign Up"></div>
+				</form>
 			</div>
 		<div id="footer"></div>		
 	</body>
