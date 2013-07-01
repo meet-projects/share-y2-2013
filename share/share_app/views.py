@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
-
+from django.contrib.auth.decorators import login_required
 def home(request):
   return render(request, 'share_app/Homepage.html', {})
 
@@ -36,4 +36,4 @@ def signup(request):
 
 def logout_user(request):
 	logout(request)
-	return HttpResponseRedirect('home')
+	return HttpResponseRedirect('login')
