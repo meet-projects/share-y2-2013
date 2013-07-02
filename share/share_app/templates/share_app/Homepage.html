@@ -1,28 +1,33 @@
 <html>
 
-<head>
+	<head>
 
-<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/Homepage.css">
-<title> SHARE/homepage </title>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/Homepage.css">
+		<title> SHARE/homepage </title>
 
-</head>
+	</head>
 
-<body>
+	<body>
+		
+		<div id="left"></div>
+		<div id="middle">
+			<span class="span1"><a href="">Share</a></span>
+			<a href="Home" class="Home">Home</a>
+			<a href="profile" class="Profile">Profile</a>
+			<span class="span1"><a href="/logout">Log Out</a></span>
+			<br><br><br>
+			<p id="info day">Information of the day:</p>
+			<div id="graph">
+			<img src="{{ STATIC_URL }}images/graph1.jpg" alt="Graph1" 
+			width="300px" height="200px">
+			</div>
+			<div id="graph">
+			<img src="{{ STATIC_URL }}images/graph2.jpg" alt="Graph2"
+			width="300px" height="200px">
+			</div>
+		</div>
+		<div id="right"></div>
 
-<span class="span1"><a href="">Share</a></span>
-<a href="Home" class="Home">Home</a>
-<a href="profile" class="Profile">Profile</a>
-<span class="span1"><a href="/logout">Log Out</a></span>
-<br><br><br>
-<p id="info day">Information of the day:</p>
-<div id="graph">
-<img src="{{ STATIC_URL }}images/graph1.jpg" alt="Graph1" 
-width="300px" height="200px">
-</div>
-<div id="graph">
-<img src="{{ STATIC_URL }}images/graph2.jpg" alt="Graph2"
-width="300px" height="200px">
-</div>
-</body>
+	</body>
 
 </html>
