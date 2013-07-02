@@ -9,6 +9,12 @@ body {
 	font-size: 80;
 }
 
+#header2{
+	height: 20%;
+	background-color:purple;
+	font-size: 40;
+}
+
 #main {
 	background-color:6666CC;
 	height: 60%;
@@ -29,6 +35,7 @@ body {
 #footer{
 	height:20%;
 	background-color: purple;
+	clear:both;
 }
 
 
