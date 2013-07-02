@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+}
+
+#header{
+	text-align:center;
+	height: 20%;
+	background-color:purple;
+	font-size: 80;
+}
+
+#main {
+	background-color:6666CC;
+	height: 60%;
+	
+}
+
+#login {
+	float:left;
+	padding-left:80px;
+}
+
+#signup {
+	float:right;
+	width:450px;
+	
+}
+
+#footer{
+	height:20%;
+	background-color: purple;
+}
