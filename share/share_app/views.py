@@ -22,9 +22,9 @@ def submitlogin(request):
 		if user.is_active:
 			login(request, user)
 		else:
-			return HttpRespose("nonono")
+			return HttpRespose("INVALID USER")
 	else:
-		return HttpResponse("INVALID !!!!!!!!!!!!!!")
+		return HttpResponse("INVALID USER!")
 	return HttpResponseRedirect('home')
 
 def signup(request):
