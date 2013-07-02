@@ -26,9 +26,11 @@ body {
 	padding-left:80px;
 }
 
-#Settings {
+#Settings_A {
 	float:right;
 	width:450px;
+	position:relative;
+	left: 100%;
 	
 }
 
