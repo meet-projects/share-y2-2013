@@ -9,7 +9,8 @@
 
 		<div id="header">{{ user.first_name }} {{ user.last_name }}
 			<div id="header2">
-					<span class="span1"><a href="">Share</a></span>
+						<img src="{{ STATIC_URL }}images/logo2.png" alt="logo" 
+width="100px" height="100px">
 <a href="home" class="b">Home</a>
 <a href="profile" class="b">Profile</a>
 <a href="logout" class="b">Log out</a>
@@ -18,11 +19,10 @@
 		<div id="main">
 			<div id="AddPhoto">
 				<div id="Settings_A">
-					<h1>Settings: </h1>
-					<div>School: <input type= 'text' name= 'School'/></div></br>
-					<div>Email: <input type='text' name='email'/> </div></br>
-					<div>Work: <input type='text' name='work'/> </div></br>
-					<div>Hobby: <input type='text' name='hobby'></div>		
+
+					<div><p>Hobbies: {{user.hobbies }}</p> </div>		
+					<div><p>School: {{user.school}}</p></div>
+					<div><p>Birthday:{{user.birthday}}</p></div>
 				</div>
 			</div>
 		</div>
