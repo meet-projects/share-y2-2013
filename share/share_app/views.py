@@ -10,6 +10,7 @@ def home(request):
 
 def profile(request):
   user = request.user
+  print user
   return render(request, 'share_app/profile.html', {'user':user})
 
 def login_user(request):
@@ -29,9 +30,11 @@ def submitlogin(request):
 	return HttpResponseRedirect('home')
 
 def signup(request):
-	User.objects.create_user(username=request.POST['username'], email=request.POST["email"],password=request.POST["password"],first_name=request.POST["firstname"], last_name=request.POST["lastname"])
+	User.objects.create_user(username=request.POST['username'], email=request.POST["email"],password=request.POST["password"],first_name=request.POST["firstname"], last_name=request.POST["lastname"]).save()
 	user = authenticate(username=request.POST['username'],
                             password=request.POST['password'])
+    profile = Profiles.objects.create(hobbies = request.POST['hobbies'],school = request.POST['school'], birthday = request.POST['birthday'], user = user)
+	profile.save()
 	login(request, user)
 	return HttpResponseRedirect('home')
 
