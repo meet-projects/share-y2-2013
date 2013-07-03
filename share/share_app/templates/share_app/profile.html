@@ -1,14 +1,13 @@
 <html>
 	<head>
-	<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css"> -->
-	<link rel="stylesheet" type="text/css" href="../../static/css/profile.css">
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
 	<title>SHARE - profile</title>
 	</head>
 
 	<body>
 
 
-		<div id="header">ANGELINA HODALI
+		<div id="header">{{ user.first_name }} {{ user.last_name }}
 			<div id="header2">
 					<span class="span1"><a href="">Share</a></span>
 <a href="home" class="b">Home</a>

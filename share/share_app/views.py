@@ -9,7 +9,8 @@ def home(request):
   return render(request, 'share_app/Homepage.html', {})
 
 def profile(request):
-  return render(request, 'share_app/profile.html', {})
+  user = request.user
+  return render(request, 'share_app/profile.html', {'user':user})
 
 def login_user(request):
   return render(request, 'share_app/login.html', {})
