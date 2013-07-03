@@ -33,8 +33,7 @@ def submitlogin(request):
 	return HttpResponseRedirect('home')
 
 def signup(request):
-	user1 = User.objects.create_user(username=request.POST['username'], email=request.POST["email"],password=request.POST["password"],first_name=request.POST["firstname"], last_name=request.POST["lastname"])
-	user1.save()
+	user1 = User.objects.create_user(username=request.POST['username'], email=request.POST["email"],password=request.POST["password"],first_name=request.POST["first_name"], last_name=request.POST["last_name"])
 	
 	birthdate = datetime.datetime(int(request.POST['birthday_year']), int(request.POST['birthday_month']), int(request.POST['birthday_day']))
 	profile = Profile.objects.create(hobbies = request.POST['hobbies'],school = request.POST['school'], birthday = birthdate, user = user1)
