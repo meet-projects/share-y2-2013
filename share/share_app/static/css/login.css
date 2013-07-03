@@ -17,9 +17,7 @@ body {
 }
 
 #main {
-	font-size: 80;
 
-	background-color:blue;
 	height: 60%;
 	
 }
@@ -37,5 +35,4 @@ body {
 
 #footer{
 	height:20%;
-	background-color: orange;
 }
