@@ -1,38 +1,32 @@
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="profile.css">
-</head>
+	<head>
+	<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css"> -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/profile.css">
+	<title>SHARE - profile</title>
+	</head>
 
-<body>
-
-<span class="span1">Share</span>
-<span class="span1">Home</span>
-<span class="span1">Profile</span>
-<span class="span1">Log Out</span>
-
-<table>
-<tr>
-<td></td>
-<div id="container1" style="width:200px">
-<p id="name">Roni London</p>
-<img src="roni.jpg" alt="Roni London"
-width="200" height="150">
-</div>
-
-<div id="container3" style="float:right">
-<p id="name2">My Information:</p>
-</div>
-<div id="container2" style="width:100px;height:100px;">
-<p id="name2"> Gender: Female</p>
-<p id="name2">Birthday:December 9th</p>
-<p id="name2">Hobbies: Dancing, Reading, Photography</p>
-</div>
+	<body>
 
 
-
-</div>
-
-</body>
-
-</html>
-
+		<div id="header">ANGELINA HODALI
+			<div id="header2">
+					<span class="span1"><a href="">Share</a></span>
+<a href="home" class="b">Home</a>
+<a href="profile" class="b">Profile</a>
+<a href="logout" class="b">Log out</a>
+			</div>
+		</div>
+		<div id="main">
+			<div id="AddPhoto">
+				<div id="Settings_A">
+					<h1>Settings: </h1>
+					<div>School: <input type= 'text' name= 'School'/></div></br>
+					<div>Email: <input type='text' name='email'/> </div></br>
+					<div>Work: <input type='text' name='work'/> </div></br>
+					<div>Hobby: <input type='text' name='hobby'></div>		
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>		
+	</body>
+</html>	
