@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 #img.source-image {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-#left{background-color:6666CC;
-=======
 #left{ 
 	  float:left;
 	  background-color:#6666CC;
->>>>>>> 87f286759a11495af2ca58877fb7fe6df94ccb84
       width:20%;
       height:100%;
 
