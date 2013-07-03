@@ -22,6 +22,9 @@ body {
 	font-size: 40;
 }
 
+#username {
+font-weight:bold
+}
 #main {
 	background-color:6666CC;
 	height: 60%;

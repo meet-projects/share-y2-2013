@@ -19,11 +19,10 @@ width="100px" height="100px">
 		<div id="main">
 			<div id="AddPhoto">
 				<div id="Settings_A">
-					<h1>Settings: </h1>
-					<div>School: <input type= 'text' name= 'School'/></div></br>
-					<div>Email: <input type='text' name='email'/> </div></br>
-					<div>Work: <input type='text' name='work'/> </div></br>
-					<div>Hobby: <input type='text' name='hobby'></div>		
+					<div id="username"><p>{{user.user.first_name}} {{user.user.last_name}}</p></div>
+					<div><p>Hobbies: {{user.hobbies }}</p> </div>		
+					<div><p>School: {{user.school}}</p></div>
+					<div><p>Birthday:{{user.birthday}}</p></div>
 				</div>
 			</div>
 		</div>
