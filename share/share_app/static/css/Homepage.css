@@ -1,7 +1,26 @@
-#left{background-color:6666CC;
+#left{ 
+	  float:left;
+	  background-color:#6666CC;
       width:20%;
       height:100%;
+
 }
+#middle{
+	    float:left;
+	    background-color:blue;
+		width:60%;
+	    height:100%;
+
+}	
+#right{
+	   float:right;
+	   background-color:#6666CC;
+       width:20%;
+	   height:100%;
+
+
+}
+
 .b {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
