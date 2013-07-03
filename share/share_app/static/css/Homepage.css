@@ -4,11 +4,27 @@
   top: 0;
   left: 0;
 }
+
+
+#logo {
+	
+}
+
+#infoday{
+	text-align:center;
+	
+}
+
+
+
+
+
+
 #left{ 
-	  float:left;
-	  background-color:#6666CC;
-      width:20%;
-      height:100%;
+	float:left;  
+	background-color:orange;
+        width:20%;
+        height:100%;
 
 }
 #middle{
@@ -20,7 +36,7 @@
 }	
 #right{
 	   float:right;
-	   background-color:#6666CC;
+	   background-color:orange;
        width:20%;
 	   height:100%;
 

@@ -13,13 +13,13 @@ body {
 #header{
 	text-align:center;
 	height: 20%;
-	background-color:purple;
+	background-color:orange;
 	font-size: 80;
 }
 
 #header2{
 	height: 20%;
-	background-color:purple;
+	background-color:orange;
 	font-size: 40;
 }
 
@@ -28,7 +28,7 @@ font-weight:bold;
 font-size: 50px;
 }
 #main {
-	background-color:6666CC;
+	background-color:blue;
 	height: 60%;
 	
 }
