@@ -45,3 +45,9 @@ def signup(request):
 def logout_user(request):
 	logout(request)
 	return HttpResponseRedirect('login')
+
+def mood(request):
+	moodinfo = Info.objects.create (mood = request.POST['moood'])
+	moodinfo.save()
+	return HttpResponse('profile')
+

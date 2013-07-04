@@ -9,6 +9,8 @@ class Profile(models.Model):
 	birthday = models.DateField()
 	user = models.OneToOneField(User)
 
+class Info(models.Model):
+	mood = models.CharField(max_length=300)
 	
 
 	
