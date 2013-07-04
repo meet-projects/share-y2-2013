@@ -44,6 +44,16 @@ font-size: 50px;
 	left: 100%;
 	
 }
+#containercol{
+	width: 600px;
+	margin:0 auto;
+}
+
+#containerpie{
+	width:600px;
+	margin: 0 auto;
+}
+
 
 #footer{
 	height:20%;

@@ -8,7 +8,16 @@
 <div id="graph1">		
 <script type="text/javascript" >
 $(function () {
-        $('#container').highcharts({
+		$('#containerpie').hide();
+		$("#colchart").click(function(){
+			$('#containercol').show();	
+			$('#containerpie').hide();
+		});
+		$("#piechart").click(function(){
+			$('#containerpie').show();	
+			$('#containercol').hide();
+		});
+        $('#containercol').highcharts({
             chart: {
                 type: 'bar'
             },
@@ -69,6 +78,76 @@ $(function () {
 
 
 		</script></div>
+<div id="graph2">		
+<script type="text/javascript" >
+$(function () {
+    $('#containerpie').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Moods'
+        },
+		
+		
+        tooltip: {
+    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Moods',
+            data: [
+                 {
+                    name: 'Happy',
+                    y: {{happies}},
+                    sliced: true,
+                    selected: true
+                },
+                 {
+                    name: 'Sad',
+                    y: {{saddies}},
+                    sliced: true,
+                    selected: true
+                },
+                {
+                    name: 'Angry',
+                    y: {{angries}},
+                    sliced: true,
+                    selected: true
+                },
+                 {
+                    name: 'Annoyed',
+                    y: {{annoyies}},
+                    sliced: true,
+                    selected: true
+                },
+                 {
+                    name: 'Sleepy',
+                    y: {{sleepies}},
+                    sliced: true,
+                    selected: true
+                },
+               
+            ]
+        }]
+    });
+});
+    
+</script></div>
 </head>
 
 	<body>
@@ -97,7 +176,10 @@ width="100px" height="100px">
 				</div>
 			</div>
 		</div>
-		<div id="container" style="width:60%; height:400px;"></div>	
+			<div id="colchart" class="b">Column</div> 
+			<div id="piechart" class="b">Pie</div>
+			<div id="containercol" style="width:40%; height:400px;"></div>
+			<div id="containerpie" style="width:40%; height:400px;"></div>
 <div id="footer"></div>	
 
 	</body>

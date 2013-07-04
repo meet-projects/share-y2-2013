@@ -8,12 +8,23 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 import datetime
 def home(request):
-  return render(request, 'share_app/Homepage.html', {})
+  happies = Info.objects.filter(mood="Happy")
+  saddies = Info.objects.filter(mood="Sad")
+  angries = Info.objects.filter(mood="Angry")
+  annoyies = Info.objects.filter(mood="Annoyed")
+  sleepies = Info.objects.filter(mood="Sleepy")
+  happies_num = len(happies)
+  saddies_num = len(saddies)
+  angries_num = len(angries)
+  annoyies_num = len(annoyies)
+  sleepies_num = len(sleepies)
+  context = { 'happies':happies_num,'saddies':saddies_num,'angries':angries_num,'annoyies':annoyies_num,'sleepies':sleepies_num}
+  return render(request, 'share_app/Homepage.html', context)
 
 def profile(request):
   user = request.user
   profile = Profile.objects.filter(user = user)
-  print profile[0].hobbies
+  print profile
   happies = Info.objects.filter(mood="Happy", profile=profile[0])
   saddies = Info.objects.filter(mood="Sad", profile=profile[0])
   angries = Info.objects.filter(mood="Angry", profile=profile[0])
