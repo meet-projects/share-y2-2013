@@ -1,6 +1,6 @@
 # Create your views here.
 from django.shortcuts import render
-from models import Profile
+from models import Profile, Info
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
@@ -49,7 +49,7 @@ def logout_user(request):
 def mood(request):
 	user = request.user
 	profile = Profile.objects.filter(user = user)[0]
-	moodinfo = Info.objects.create (mood = request.POST['moood'], profile=profile)
+	moodinfo = Info.objects.create (mood = request.POST['mood'], profile=profile)
 	moodinfo.save()
-	return HttpResponse('profile')
+	return HttpResponseRedirect('profile')
 

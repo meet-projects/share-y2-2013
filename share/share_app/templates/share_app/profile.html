@@ -23,7 +23,10 @@ width="100px" height="100px">
 					<div><p>Hobbies: {{user.hobbies }}</p> </div>		
 					<div><p>School: {{user.school}}</p></div>
 					<div><p>Birthday: {{user.birthday}}</p></div>
+					<form action="mood" method="post">
+        			{%csrf_token%}					
 					<div>What Is Your Mood Today?  <input type='text' name='mood'/> </div><br />
+					 <input type='submit' value="Submit" href = "profile"/>
 				</div>
 			</div>
 		</div>

@@ -1,7 +1,34 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/Homepage.css">
-		<title> SHARE/homepage </title>
+		<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" >
+			$(document).ready(function () { 
+				$('#container').highcharts({
+					chart: {
+						type: 'bar'
+					},
+					title: {
+						text: 'Fruit Consumption'
+					},
+					xAxis: {
+						categories: ['Apples', 'Bananas', 'Oranges']
+					},
+					yAxis: {
+						title: {
+						    text: 'Fruit eaten'
+						}
+					},
+					series: [{
+						data: [1, 5, 4]
+					}]
+				});
+			});
+		</script>
+		
+<title> SHARE/homepage </title>
 
 	</head>
 
@@ -23,7 +50,9 @@
 			<div id="graph2">
 				<img src="{{ STATIC_URL }}images/graph2.jpg" alt="Graph2" width="300px" height="200px">
 			</div>
+			<div id="container" style="width:100%; height:400px;"></div>
 		</div>
 		<div id="right"></div>
+
 	</body>
 </html>

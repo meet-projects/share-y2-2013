@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^logout$', views.logout_user),
     url(r'^submitlogin$', views.submitlogin),
     url(r'^signup$', views.signup),
+	url(r'^mood$', views.mood),
     # url(r'^$', 'share.views.home', name='home'),
     # url(r'^share/', include('share.foo.urls')),
 
