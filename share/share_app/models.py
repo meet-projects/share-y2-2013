@@ -11,7 +11,7 @@ class Profile(models.Model):
 
 class Info(models.Model):
 	mood = models.CharField(max_length=300)
-	
+	profile = models.ForeignKey(Profile)
 
 	
 
