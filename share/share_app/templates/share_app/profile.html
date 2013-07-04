@@ -2,7 +2,74 @@
 	<head>
 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
 	<title>SHARE - profile</title>
-	</head>
+	<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+<div id="graph1">		
+<script type="text/javascript" >
+$(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Moods'
+            },
+            subtitle: {
+                text: 'Your personal moods'
+            },
+            xAxis: {
+                categories: ['Happy', 'Sad', 'Angry', 'Annoyed', 'Sleepy'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Moods',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: 'Moods'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -100,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Moods',
+                data: [{{happies}}, {{saddies}},{{angries}}, {{annoyies}} ,{{sleepies}}]
+				//data: [12, 17,45, 77 ,58]
+            }]
+        });
+    });
+    
+
+
+		</script></div>
+</head>
 
 	<body>
 
@@ -30,6 +97,8 @@ width="100px" height="100px">
 				</div>
 			</div>
 		</div>
-		<div id="footer"></div>		
+		<div id="container" style="width:60%; height:400px;"></div>	
+<div id="footer"></div>	
+
 	</body>
 </html>	

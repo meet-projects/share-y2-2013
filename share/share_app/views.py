@@ -14,7 +14,18 @@ def profile(request):
   user = request.user
   profile = Profile.objects.filter(user = user)
   print profile[0].hobbies
-  return render(request, 'share_app/profile.html', {'user':profile[0]})
+  happies = Info.objects.filter(mood="Happy", profile=profile[0])
+  saddies = Info.objects.filter(mood="Sad", profile=profile[0])
+  angries = Info.objects.filter(mood="Angry", profile=profile[0])
+  annoyies = Info.objects.filter(mood="Annoyed", profile=profile[0])
+  sleepies = Info.objects.filter(mood="Sleepy", profile=profile[0])
+  happies_num = len(happies)
+  saddies_num = len(saddies)
+  angries_num = len(angries)
+  annoyies_num = len(annoyies)
+  sleepies_num = len(sleepies)
+  context = {'user':profile[0], 'happies':happies_num,'saddies':saddies_num,'angries':angries_num,'annoyies':annoyies_num,'sleepies':sleepies_num}
+  return render(request, 'share_app/profile.html', context)
 
 def login_user(request):
   return render(request, 'share_app/login.html', {})

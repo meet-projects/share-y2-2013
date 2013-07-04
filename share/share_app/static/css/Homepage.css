@@ -16,8 +16,13 @@
 }
 
 
+#graph1{
+	float:left;
+}
 
-
+#graph2{
+	float:right;
+}
 
 
 #left{ 
