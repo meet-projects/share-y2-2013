@@ -14,7 +14,7 @@ body {
 	text-align:center;
 	height: 20%;
 	font-size: 80;
-	background-color:#33CCFF;
+	background-color:transparent;
 }
 
 #header2{
@@ -27,8 +27,23 @@ font-weight:bold;
 font-size: 50px;
 }
 #main {
-	height: 60%;
-	background-color:#99CCCC;
+	color:white;
+	height: 50%;
+	background:url('../images/diversity2.jpg')no-repeat center center fixed;
+ webkit-background-size: cover;
+ moz-background-size: cover;
+ o-background-size: cover;
+  background-size: cover;	
+
+	
+}
+.main {
+	background:url('../images/diversity2.jpg')no-repeat center center fixed;
+ webkit-background-size: cover;
+ moz-background-size: cover;
+ o-background-size: cover;
+  background-size: cover;	
+
 	
 }
 
@@ -42,24 +57,23 @@ font-size: 50px;
 	width:450px;
 	position:relative;
 	left: 100%;
+	font-weight:bold;
+	font-style:arial;
 	
 }
 #containercol{
 	width: 600px;
 	margin:0 auto;
+	
 }
 
 #containerpie{
 	width:600px;
 	margin: 0 auto;
+	
 }
 
 
-#footer{
-	height:20%;
-	background-color: #33CCFF;
-	clear:both;
-}
 
 
 
@@ -85,6 +99,7 @@ font-size: 50px;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
+	
 }.b:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );

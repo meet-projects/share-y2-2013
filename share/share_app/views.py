@@ -13,12 +13,20 @@ def home(request):
   angries = Info.objects.filter(mood="Angry")
   annoyies = Info.objects.filter(mood="Annoyed")
   sleepies = Info.objects.filter(mood="Sleepy")
+  calmies = Info.objects.filter(mood="Calm")
+  disappointies = Info.objects.filter(mood="Disappointed")
+  excities = Info.objects.filter(mood="Excited")
+  anxiousies = Info.objects.filter(mood="Anxious")
   happies_num = len(happies)
   saddies_num = len(saddies)
   angries_num = len(angries)
   annoyies_num = len(annoyies)
   sleepies_num = len(sleepies)
-  context = { 'happies':happies_num,'saddies':saddies_num,'angries':angries_num,'annoyies':annoyies_num,'sleepies':sleepies_num}
+  calmies_num = len(calmies)
+  disappointies_num = len(disappointies)
+  excities_num = len(excities)
+  anxiousies_num = len(anxiousies)
+  context = { 'happies':happies_num,'saddies':saddies_num,'angries':angries_num,'annoyies':annoyies_num,'sleepies':sleepies_num, 'calmies':calmies_num, 'disappointies':disappointies_num, 'excities':excities_num, 'anxiousies':anxiousies_num}
   return render(request, 'share_app/Homepage.html', context)
 
 def profile(request):
@@ -30,12 +38,20 @@ def profile(request):
   angries = Info.objects.filter(mood="Angry", profile=profile[0])
   annoyies = Info.objects.filter(mood="Annoyed", profile=profile[0])
   sleepies = Info.objects.filter(mood="Sleepy", profile=profile[0])
+  calmies = Info.objects.filter(mood="Calm", profile=profile[0])
+  disappointies = Info.objects.filter(mood="Disappointed", profile=profile[0])
+  excities = Info.objects.filter(mood="Excited", profile=profile[0])
+  anxiousies = Info.objects.filter(mood="Anxious", profile=profile[0])
   happies_num = len(happies)
   saddies_num = len(saddies)
   angries_num = len(angries)
   annoyies_num = len(annoyies)
   sleepies_num = len(sleepies)
-  context = {'user':profile[0], 'happies':happies_num,'saddies':saddies_num,'angries':angries_num,'annoyies':annoyies_num,'sleepies':sleepies_num}
+  calmies_num = len(calmies)
+  disappointies_num = len(disappointies)
+  excities_num = len(excities)
+  anxiousies_num = len(anxiousies)
+  context = {'user':profile[0], 'happies':happies_num,'saddies':saddies_num,'angries':angries_num,'annoyies':annoyies_num,'sleepies':sleepies_num, 'calmies':calmies_num, 'disappointies':disappointies_num, 'excities':excities_num, 'anxiousies':anxiousies_num}
   return render(request, 'share_app/profile.html', context)
 
 def login_user(request):

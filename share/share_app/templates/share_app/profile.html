@@ -150,11 +150,11 @@ $(function () {
 </script></div>
 </head>
 
-	<body>
+	<body class="main">
 
 
 		<div id="header">{{ user.first_name }} {{ user.last_name }}
-			<div id="header2">
+			
 						<img src="{{ STATIC_URL }}images/logo2.png" alt="logo" 
 width="100px" height="100px">
 <a href="home" class="b">Home</a>
@@ -171,16 +171,27 @@ width="100px" height="100px">
 					<div><p>Birthday: {{user.birthday}}</p></div>
 					<form action="mood" method="post">
         			{%csrf_token%}					
-					<div>What Is Your Mood Today?  <input type='text' name='mood'/> </div><br />
+					<div>What Is Your Mood Today? 
+					<select name='mood'>
+						<option value="Sad">Sad</option>
+						<option value="Happy">Happy</option>
+						<option value="Angry">Angry</option>
+						<option value="Annoyed">Annoyed</option>
+						<option value="Sleepy">Sleepy</option>
+						<option value="Calm">Calm</option>
+						<option value="Disappointed">Disappointed</option>
+						<option value="Excited">Excited</option>
+						<option value="Anxious">Anxious</option>
+					</select> </div><br />
 					 <input type='submit' value="Submit" href = "profile"/>
 				</div>
 			</div>
 		</div>
 			<div id="colchart" class="b">Column</div> 
 			<div id="piechart" class="b">Pie</div>
-			<div id="containercol" style="width:40%; height:400px;"></div>
-			<div id="containerpie" style="width:40%; height:400px;"></div>
-<div id="footer"></div>	
+			<div id="containercol" style="width:30%; height:400px;"></div>
+			<div id="containerpie" style="width:30%; height:400px;"></div>
+	
 
 	</body>
 </html>	
