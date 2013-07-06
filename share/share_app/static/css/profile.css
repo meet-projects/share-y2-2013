@@ -14,7 +14,7 @@ body {
 	text-align:center;
 	height: 20%;
 	font-size: 80;
-	background-color:#58FAD0;
+	background-color:#33CCFF;
 }
 
 #header2{
@@ -28,7 +28,7 @@ font-size: 50px;
 }
 #main {
 	height: 60%;
-	background-color:#9F81F7;
+	background-color:#99CCCC;
 	
 }
 
@@ -57,7 +57,7 @@ font-size: 50px;
 
 #footer{
 	height:20%;
-	background-color: #58FAD0;
+	background-color: #33CCFF;
 	clear:both;
 }
 

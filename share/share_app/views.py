@@ -49,7 +49,7 @@ def submitlogin(request):
 		if user.is_active:
 			login(request, user)
 		else:
-			return HttpRespose("INVALID USER")
+			return HttpRespose("INVALID USER ASS")
 	else:
 		return HttpResponse("INVALID USER!")
 	return HttpResponseRedirect('home')
