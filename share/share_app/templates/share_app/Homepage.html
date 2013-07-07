@@ -4,6 +4,20 @@
 		<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
 
 		<script src="http://code.highcharts.com/highcharts.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$('#containerpie').hide();
+		$("#colchart").click(function(){
+			$('#containercol').show();	
+			$('#containerpie').hide();
+		});
+		$("#piechart").click(function(){
+			$('#containerpie').show();	
+			$('#containercol').hide();
+		});
+			});
+		</script>
 <div id="graph1">		
 <script type="text/javascript" >
 $(function () {
@@ -177,9 +191,12 @@ $(function () {
 
 			<br><br><br>
 			<h1 id="infoday">Information of the day:</h1> <br><br><br><br><br><br>
-			
-			<div id="containercol" style="width:30%; height:400px;"></div>
-			<div id="containerpie" style="width:30%; height:400px;"></div>
+			<div>
+			<div id="colchart" class="b">Column</div> 
+			<div id="piechart" class="b">Pie</div>			
+			<div id="containercol" style="width:40%; height:400px;"></div>
+			<div id="containerpie" style="width:40%; height:400px;"></div>
+			</div>
 		</div>
 
 
