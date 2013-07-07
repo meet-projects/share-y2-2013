@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 import datetime
+from random import choice
 def home(request):
   happies = Info.objects.filter(mood="Happy")
   saddies = Info.objects.filter(mood="Sad")
@@ -55,7 +56,9 @@ def profile(request):
   return render(request, 'share_app/profile.html', context)
 
 def login_user(request):
-  return render(request, 'share_app/login.html', {})
+  bgimages=['1.png','steev.jpg','mark.jpg','obama.jpg']
+  context={'bgimage':choice(bgimages)}
+  return render(request, 'share_app/login.html', context)
 
 def submitlogin(request):
 	user1 = request.POST.get('username',False)
