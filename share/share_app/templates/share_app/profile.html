@@ -28,7 +28,7 @@ $(function () {
                 text: 'Your personal moods'
             },
             xAxis: {
-                categories: ['Happy', 'Sad', 'Angry', 'Annoyed', 'Sleepy'],
+                categories: ['Happy', 'Sad', 'Angry', 'Annoyed', 'Sleepy', 'Calm', 'Disappointed', 'Excited', 'Anxious'],
                 title: {
                     text: null
                 }
@@ -69,7 +69,7 @@ $(function () {
             },
             series: [{
                 name: 'Moods',
-                data: [{{happies}}, {{saddies}},{{angries}}, {{annoyies}} ,{{sleepies}}]
+                data: [{{happies}}, {{saddies}},{{angries}}, {{annoyies}} ,{{sleepies}}, {{calmies}}, {{disappointies}}, {{excities}}, {{anxiousies}}]
 				//data: [12, 17,45, 77 ,58]
             }]
         });
@@ -141,7 +141,30 @@ $(function () {
                     sliced: true,
                     selected: true
                 },
-               
+               {
+		   name: 'Calm',
+                    y: {{calmies}},
+                    sliced: true,
+                    selected: true
+		},
+		{
+		   name: 'Disappointed',
+                    y: {{disappointies}},
+                    sliced: true,
+                    selected: true
+		},
+		{
+		   name: 'Excited',
+                    y: {{excities}},
+                    sliced: true,
+                    selected: true
+		},
+		{
+		   name: 'Anxious',
+                    y: {{anxiousies}},
+                    sliced: true,
+                    selected: true
+		},
             ]
         }]
     });
