@@ -56,7 +56,7 @@ def profile(request):
   return render(request, 'share_app/profile.html', context)
 
 def login_user(request):
-  bgimages=['1.png','steev.jpg','mark.jpg','obama.jpg']
+  bgimages=['1.png','steev.jpg','mark.jpg','obama.jpg','cave.jpg']
   context={'bgimage':choice(bgimages)}
   return render(request, 'share_app/login.html', context)
 
